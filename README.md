@@ -311,7 +311,7 @@ dataset.head()
       <td>19</td>
       <td>1</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>122</td>
     </tr>
     <tr>
@@ -373,22 +373,6 @@ y = dataset.label
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=27)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-9-c4b5deb01603> in <module>
-    ----> 1 from sklearn.model_selection import train_test_split
-          2 
-          3 X = dataset[['word_count', 'any_neg', 'any_rare', 'char_count', 'is_question']]
-          4 y = dataset.label
-          5 
-    
-
-    ModuleNotFoundError: No module named 'sklearn'
-
-
 ### 4. Train an ML model for Text Classification
 
 Now that the dataset is ready, it is time to train a Machine Learning model on the same. You will be using a **Naive Bayes** classifier from `sklearn` which is a prominent python library used for machine learning.
@@ -405,22 +389,6 @@ model = model.fit(X_train, y_train)
 pred = model.predict(X_test)
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-10-e87ed8b8ae78> in <module>
-    ----> 1 from sklearn.naive_bayes import GaussianNB
-          2 
-          3 #Initialize GaussianNB classifier
-          4 model = GaussianNB()
-          5 #Fit the model on the train dataset
-    
-
-    ModuleNotFoundError: No module named 'sklearn'
-
-
 ### 5. Evaluate the ML model
 
 It is time to train the model on previously unseen data: **X_test** and **y_test** sets that you previously created. Let's check the accuracy of the model.
@@ -432,20 +400,14 @@ from sklearn.metrics import accuracy_score
 print("Accuracy:", accuracy_score(y_test, pred)*100, "%")
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-11-6ab4ae348b38> in <module>
-    ----> 1 from sklearn.metrics import accuracy_score
-          2 
-          3 print("Accuracy:", accuracy_score(y_test, pred)*100, "%")
+    Accuracy: 60.0 %
     
-
-    ModuleNotFoundError: No module named 'sklearn'
-
 
 ### 6. Conclusion
 
 **Note:** that since we have used very basic NLP features, the classification accuracy and f1 scores aren't that impressive. The goal of this exercise was to make you familiar with the model building process and I hope that you have a better idea on how to build a text classification model.
+
+
+```python
+
+```
