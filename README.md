@@ -261,7 +261,7 @@ dataset.head()
 
 
 <div>
-<style scoped>
+<style type="text/stylesheet" scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
